@@ -1,12 +1,12 @@
 import { Component, ViewChild } from "@angular/core";
-import { LightsGridComponent } from "event-emitter-timeline/components";
+import { LightsGridComponent } from "app/components";
 
 @Component({
-	selector: "lights-out-page",
-	templateUrl: "./lights-out.page.html",
-	styleUrls: ["./lights-out.page.scss"],
+	selector: "lights-puzzle-page",
+	templateUrl: "./lights-puzzle.page.html",
+	styleUrls: ["./lights-puzzle.page.scss"],
 })
-export class LightsOutPage {
+export class LightsPuzzlePage {
 	@ViewChild(LightsGridComponent)
 	public grid: LightsGridComponent;
 
