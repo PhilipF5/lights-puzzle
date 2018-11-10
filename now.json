@@ -1,5 +1,12 @@
 {
 	"name": "gsap-lights",
 	"type": "static",
-	"alias": ["gsap-lights"]
+	"alias": ["gsap-lights"],
+	"version": 2,
+	"builds": [
+		{ "src": "dist/*", "use": "@now/static" }
+	],
+	"routes": [
+		{ "src": "/(.*)", "dest": "/dist/$1" }
+	]
 }
