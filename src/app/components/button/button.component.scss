@@ -7,7 +7,8 @@ div {
 	font-size: 16pt;
 	height: 50px;
 	justify-content: center;
-	width: 75px;
+	padding-left: 10px;
+	padding-right: 10px;
 
 	&.flash {
 		background-color: rgb(138, 0, 0);

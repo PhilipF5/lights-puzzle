@@ -1,4 +1,4 @@
-import { Component, Input, QueryList, ViewChildren } from "@angular/core";
+import { Component, Input, OnChanges, QueryList, SimpleChanges, ViewChildren } from "@angular/core";
 import { LightsRowComponent } from "../lights-row/lights-row.component";
 
 @Component({
@@ -6,7 +6,7 @@ import { LightsRowComponent } from "../lights-row/lights-row.component";
 	templateUrl: "./lights-grid.component.html",
 	styleUrls: ["./lights-grid.component.scss"],
 })
-export class LightsGridComponent {
+export class LightsGridComponent implements OnChanges {
 	public isSolved: boolean;
 	@ViewChildren(LightsRowComponent)
 	public rows: QueryList<LightsRowComponent>;
@@ -15,6 +15,12 @@ export class LightsGridComponent {
 
 	public get sizeArray() {
 		return new Array(this.size);
+	}
+
+	ngOnChanges(changes: SimpleChanges) {
+		if (changes["size"] && !changes["size"].isFirstChange()) {
+			this.reset();
+		}
 	}
 
 	public onToggle(col: number, row: number) {

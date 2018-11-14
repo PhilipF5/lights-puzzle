@@ -7,6 +7,7 @@ import { LightsGridComponent } from "app/components";
 	styleUrls: ["./lights-puzzle.page.scss"],
 })
 export class LightsPuzzlePage {
+	public difficulty: (3 | 6) = 6;
 	@ViewChild(LightsGridComponent)
 	public grid: LightsGridComponent;
 
@@ -14,7 +15,15 @@ export class LightsPuzzlePage {
 		return this.grid.isSolved;
 	}
 
+	public get switchText(): string {
+		return "Switch to " + (this.difficulty === 3 ? "Hard" : "Easy");
+	}
+
 	public onReset() {
 		this.grid.reset();
+	}
+
+	public switchDifficulty() {
+		this.difficulty = this.difficulty === 3 ? 6 : 3;
 	}
 }
