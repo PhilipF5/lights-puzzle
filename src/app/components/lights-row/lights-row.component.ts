@@ -14,6 +14,7 @@ export class LightsRowComponent {
 	public lights: QueryList<LightComponent>;
 	@Output()
 	public toggled: EventEmitter<number> = new EventEmitter<number>();
+	@Input() public useLargeLights: boolean;
 
 	public get lengthArray() {
 		return new Array(this.length);

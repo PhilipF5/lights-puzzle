@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, NgZone, OnInit, Output, ViewChild } from "@angular/core";
+import { Component, ElementRef, EventEmitter, Input, NgZone, OnInit, Output, ViewChild } from "@angular/core";
 import { Elastic, TimelineLite, TweenLite } from "gsap";
 
 @Component({
@@ -7,6 +7,7 @@ import { Elastic, TimelineLite, TweenLite } from "gsap";
 	styleUrls: ["./light.component.scss"],
 })
 export class LightComponent implements OnInit {
+	@Input() public large: boolean;
 	@Output()
 	public toggled: EventEmitter<{}> = new EventEmitter();
 
@@ -34,11 +35,11 @@ export class LightComponent implements OnInit {
 	}
 
 	public activate(): TweenLite {
-		return TweenLite.fromTo(this.light, 0.5, { className: "" }, { className: "active" });
+		return TweenLite.to(this.light, 0.5, { className: "+=active" });
 	}
 
 	public inactivate(): TweenLite {
-		return TweenLite.fromTo(this.light, 0.5, { className: "active" }, { className: "" });
+		return TweenLite.to(this.light, 0.5, { className: "-=active" });
 	}
 
 	public onClick() {

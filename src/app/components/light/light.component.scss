@@ -12,4 +12,11 @@ div {
 		background: radial-gradient(circle at center, rgb(255, 164, 0) 0%, rgb(250, 127, 114) 100%);
 		filter: drop-shadow(0 0 10px rgba(250, 128, 114, 0.8));
 	}
+
+	&.large {
+		height: 30vw;
+		max-height: 150px;
+		width: 30vw;
+		max-width: 150px;
+	}
 }
