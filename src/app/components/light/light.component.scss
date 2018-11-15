@@ -1,10 +1,12 @@
 div {
 	background: radial-gradient(circle at center, rgb(138, 0, 0) 0%, rgb(138, 0, 0) 100%);
-	border-radius: 50px;
+	border-radius: 50vw;
 	cursor: pointer;
-	height: 75px;
+	height: 16vw;
+	max-height: 10vh;
+	max-width: 10vh;
 	position: relative;
-	width: 75px;
+	width: 16vw;
 
 	&.active {
 		background: radial-gradient(circle at center, rgb(255, 164, 0) 0%, rgb(250, 127, 114) 100%);
