@@ -1,8 +1,8 @@
 {
-	"name": "gsap-lights",
+	"name": "lights-puzzle",
 	"version": "1.0.3",
 	"author": "Philip Fulgham (https://www.philipfulgham.com)",
-	"repository": "github:PhilipF5/gsap-lights",
+	"repository": "github:PhilipF5/lights-puzzle",
 	"license": "MIT",
 	"scripts": {
 		"ng": "ng",
