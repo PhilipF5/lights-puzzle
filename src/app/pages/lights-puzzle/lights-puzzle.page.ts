@@ -1,5 +1,6 @@
 import { Component, ViewChild } from "@angular/core";
 import { LightsGridComponent } from "app/components";
+import { environment } from "environments/environment";
 
 @Component({
 	selector: "lights-puzzle-page",
@@ -10,6 +11,7 @@ export class LightsPuzzlePage {
 	public difficulty: (3 | 6) = 3;
 	@ViewChild(LightsGridComponent)
 	public grid: LightsGridComponent;
+	public version = environment.VERSION;
 
 	public get gridSolved() {
 		return this.grid.isSolved;
