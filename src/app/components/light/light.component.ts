@@ -74,9 +74,9 @@ export class LightComponent implements OnInit {
 	private setState() {
 		this._active = Math.random() > 0.5;
 		if (this.isActive) {
-			TweenLite.set(this.light, { className: "active" });
+			TweenLite.set(this.light, { className: "+=active" });
 		} else {
-			TweenLite.set(this.light, { className: "" });
+			TweenLite.set(this.light, { className: "-=active" });
 		}
 	}
 }
