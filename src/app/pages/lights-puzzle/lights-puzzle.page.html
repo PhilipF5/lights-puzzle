@@ -1,8 +1,11 @@
-<div class="header">
+<div class="header-row">
 	<div class="title">Lights Puzzle</div>
+	<div class="author">👨‍💻 by Philip Fulgham</div>
+</div>
+<div class="header-row">
+	<div class="instructions">Turn off all the lights!</div>
 	<div class="version">v{{ version }}</div>
 </div>
-<div class="instructions">Objective: Turn off all the lights.</div>
 <div class="grid-container">
 	<lights-grid [size]="difficulty"></lights-grid>
 	<div class="status-container" *ngIf="gridSolved">
