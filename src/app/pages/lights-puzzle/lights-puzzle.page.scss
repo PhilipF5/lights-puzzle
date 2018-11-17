@@ -8,3 +8,18 @@
 	margin-top: 25px;
 	width: 100%;
 }
+
+.grid-container {
+	position: relative;
+}
+
+.status-container {
+	align-items: center;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
