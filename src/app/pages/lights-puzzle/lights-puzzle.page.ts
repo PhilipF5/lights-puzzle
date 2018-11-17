@@ -9,8 +9,7 @@ import { environment } from "environments/environment";
 })
 export class LightsPuzzlePage {
 	public difficulty: (3 | 6) = 3;
-	@ViewChild(LightsGridComponent)
-	public grid: LightsGridComponent;
+	@ViewChild(LightsGridComponent) public grid: LightsGridComponent;
 	public version = environment.VERSION;
 
 	public get gridSolved() {

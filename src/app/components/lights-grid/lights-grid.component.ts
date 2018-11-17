@@ -8,10 +8,8 @@ import { LightsRowComponent } from "../lights-row/lights-row.component";
 })
 export class LightsGridComponent implements OnChanges {
 	public isSolved: boolean;
-	@ViewChildren(LightsRowComponent)
-	public rows: QueryList<LightsRowComponent>;
-	@Input()
-	public size: number = 6;
+	@ViewChildren(LightsRowComponent) public rows: QueryList<LightsRowComponent>;
+	@Input() public size: number = 6;
 
 	public get sizeArray() {
 		return new Array(this.size);

@@ -7,10 +7,8 @@ import { TweenMax } from "gsap";
 	styleUrls: ["./button.component.scss"],
 })
 export class ButtonComponent implements OnChanges {
-	@Input()
-	public highlight: boolean;
-	@Input()
-	public text: string;
+	@Input() public highlight: boolean;
+	@Input() public text: string;
 
 	private flashAnimation: TweenMax;
 

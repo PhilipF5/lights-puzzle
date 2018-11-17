@@ -8,12 +8,9 @@ import { LightComponent } from "../light/light.component";
 	styleUrls: ["./lights-row.component.scss"],
 })
 export class LightsRowComponent {
-	@Input()
-	public length: number;
-	@ViewChildren(LightComponent)
-	public lights: QueryList<LightComponent>;
-	@Output()
-	public toggled: EventEmitter<number> = new EventEmitter<number>();
+	@Input() public length: number;
+	@ViewChildren(LightComponent) public lights: QueryList<LightComponent>;
+	@Output() public toggled: EventEmitter<number> = new EventEmitter<number>();
 	@Input() public useLargeLights: boolean;
 
 	public get lengthArray() {

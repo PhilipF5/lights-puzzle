@@ -8,8 +8,7 @@ import { Elastic, TimelineLite, TweenLite } from "gsap";
 })
 export class LightComponent implements OnInit {
 	@Input() public large: boolean;
-	@Output()
-	public toggled: EventEmitter<{}> = new EventEmitter();
+	@Output() public toggled: EventEmitter<{}> = new EventEmitter();
 
 	public get isActive(): boolean {
 		return this._active;
@@ -21,8 +20,7 @@ export class LightComponent implements OnInit {
 
 	private _active: boolean;
 	private _animating: boolean;
-	@ViewChild("light")
-	private _light: ElementRef;
+	@ViewChild("light") private _light: ElementRef;
 
 	private get light(): HTMLElement {
 		return this._light.nativeElement;
