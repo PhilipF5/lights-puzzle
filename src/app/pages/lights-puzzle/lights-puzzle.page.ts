@@ -7,7 +7,7 @@ import { LightsGridComponent } from "app/components";
 	styleUrls: ["./lights-puzzle.page.scss"],
 })
 export class LightsPuzzlePage {
-	public difficulty: (3 | 6) = 6;
+	public difficulty: (3 | 6) = 3;
 	@ViewChild(LightsGridComponent)
 	public grid: LightsGridComponent;
 
